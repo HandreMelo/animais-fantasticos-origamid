@@ -1,12 +1,11 @@
 {
-  "name": "ecma6-automacao",
+  "name": "animais-fantasticos-origamid",
   "version": "1.0.0",
   "main": "index.html",
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack --mode development --watch"
   },
-  "author": "",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^8.9.0",
@@ -20,6 +19,5 @@
     "eslint-plugin-import": "^2.25.4",
     "webpack": "^5.69.1",
     "webpack-cli": "^4.9.2"
-  },
-  "description": ""
+  }
 }
