@@ -1,4 +1,4 @@
 export default function setActive(event) {
-  event.preventDefault(event);
+  if (typeof (event) === Event) event.preventDefault(event);
   this.classList.toggle('is-active');
 }
