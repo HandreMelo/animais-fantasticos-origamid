@@ -154,6 +154,7 @@ body {
   font-weight: bold;
   margin-top: 2rem;
   margin-bottom: .5rem;
+  cursor: pointer;
   color: #e54;
 }
 
@@ -173,12 +174,24 @@ body {
 }
 
 .js [data-animate="accordion"] dt + dd {
+  animation: slideUp .3s forwards;
   display: none;
 }
 
 [data-animate="accordion"] dt.is-active + dd {
   display: block;
   animation: slideDown .3s forwards;
+}
+
+[data-animate="accordion"] dt:after {
+  content: '↧';
+  display: inline-block;
+  margin-left: 10px;
+}
+
+[data-animate="accordion"] dt.is-active:after {
+  content: '↥';
+  transition: all ease 300ms;
 }
 
 .mapa {
@@ -324,8 +337,8 @@ body {
   }
 
   to {
-    opacity: 1;
     max-height: 100%;
+    opacity: 1;
   }
 }
 
