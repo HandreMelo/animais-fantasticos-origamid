@@ -20,5 +20,6 @@ export default class TabNav {
 
   init() {
     if (this.tabmenu.length && this.tabcontent.length) this.addTabNavEvent();
+    return this;
   }
 }

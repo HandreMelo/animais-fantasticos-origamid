@@ -22,7 +22,6 @@ modal.init();
 
 smoothScroll();
 scrollAnimate();
-Modal();
 tooltip();
 initDropdownMenu();
 menuMobile();

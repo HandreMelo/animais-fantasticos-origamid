@@ -29,5 +29,6 @@ export default class Accordion {
       if (this.options.startOpened) this.toggleAccordion(this.accordionList[0]);
       this.addAccordionEvent();
     }
+    return this;
   }
 }
