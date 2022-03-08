@@ -6,7 +6,7 @@ import Modal from './modules/modal.js';
 import Tooltip from './modules/tooltip.js';
 import initDropdownMenu from './modules/dropdown-menu.js';
 import menuMobile from './modules/menu-mobile.js';
-import initFechAnimais from './modules/fetch-animais.js';
+import fetchAnimals from './modules/fetch-animals.js';
 import initFetchBitcoin from './modules/fetch-bitcoin.js';
 // import { accordionActive as accordion} from './modules/accordion-active';
 // se quiser modificar o nome.
@@ -23,9 +23,10 @@ modal.init();
 const tooltip = new Tooltip('[data-tooltip]');
 tooltip.init();
 
+fetchAnimals('../../animaisapi.json', '.numbers-grid');
+
 smoothScroll();
 scrollAnimate();
 initDropdownMenu();
 menuMobile();
-initFechAnimais();
 initFetchBitcoin();
