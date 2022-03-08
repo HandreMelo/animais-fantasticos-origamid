@@ -7,7 +7,7 @@ import Tooltip from './modules/tooltip.js';
 import initDropdownMenu from './modules/dropdown-menu.js';
 import menuMobile from './modules/menu-mobile.js';
 import fetchAnimals from './modules/fetch-animals.js';
-import initFetchBitcoin from './modules/fetch-bitcoin.js';
+import fetchBitcoin from './modules/fetch-bitcoin.js';
 // import { accordionActive as accordion} from './modules/accordion-active';
 // se quiser modificar o nome.
 
@@ -24,9 +24,9 @@ const tooltip = new Tooltip('[data-tooltip]');
 tooltip.init();
 
 fetchAnimals('../../animaisapi.json', '.numbers-grid');
+fetchBitcoin('https://blockchain.info/ticker', '.btc-preco');
 
 smoothScroll();
 scrollAnimate();
 initDropdownMenu();
 menuMobile();
-initFetchBitcoin();
