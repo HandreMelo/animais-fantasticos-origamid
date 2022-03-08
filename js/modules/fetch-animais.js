@@ -1,4 +1,4 @@
-import numbersAnimate from './numbers.js';
+import NumbersAnimate from './numbers.js';
 
 function createAnimal(animal) {
   const div = document.createElement('div');
@@ -17,7 +17,8 @@ export default function iniFetchAnimais() {
         const divAnimal = createAnimal(animal);
         numerosGrid.appendChild(divAnimal);
       });
-      numbersAnimate();
+      const numbersAnimate = new NumbersAnimate('[data-number]', 'is-active', '.numbers');
+      numbersAnimate.init();
     } catch (error) {
       console.log(error);
     }
