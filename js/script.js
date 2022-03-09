@@ -4,7 +4,7 @@ import TabNav from './modules/tabnav.js';
 import Accordion from './modules/accordion-active.js';
 import Modal from './modules/modal.js';
 import Tooltip from './modules/tooltip.js';
-import initDropdownMenu from './modules/dropdown-menu.js';
+import DropdownMenu from './modules/dropdown-menu.js';
 import menuMobile from './modules/menu-mobile.js';
 import fetchAnimals from './modules/fetch-animals.js';
 import fetchBitcoin from './modules/fetch-bitcoin.js';
@@ -26,9 +26,11 @@ tooltip.init();
 const scrollAnimate = new ScrollAnimate('[data-animate="scroll"]');
 scrollAnimate.init();
 
+const dropdownMenu = new DropdownMenu('[data-dropdown]', ['touchstart', 'click']);
+dropdownMenu.init();
+
 fetchAnimals('../../animaisapi.json', '.numbers-grid');
 fetchBitcoin('https://blockchain.info/ticker', '.btc-preco');
 
 smoothScroll();
-initDropdownMenu();
 menuMobile();
