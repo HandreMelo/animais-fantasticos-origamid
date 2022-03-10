@@ -5,9 +5,10 @@ import Accordion from './modules/accordion-active.js';
 import Modal from './modules/modal.js';
 import Tooltip from './modules/tooltip.js';
 import DropdownMenu from './modules/dropdown-menu.js';
-import menuMobile from './modules/menu-mobile.js';
+import MenuMobile from './modules/menu-mobile.js';
 import fetchAnimals from './modules/fetch-animals.js';
 import fetchBitcoin from './modules/fetch-bitcoin.js';
+import OpeningHours from './modules/opening-hours.js';
 // import { accordionActive as accordion} from './modules/accordion-active';
 // se quiser modificar o nome.
 
@@ -29,8 +30,13 @@ scrollAnimate.init();
 const dropdownMenu = new DropdownMenu('[data-dropdown]', ['touchstart', 'click']);
 dropdownMenu.init();
 
-fetchAnimals('../../animaisapi.json', '.numbers-grid');
+const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]', ['click', 'touchstart']);
+menuMobile.init();
+
+const openingHours = new OpeningHours('[data-semana]', 'aberto');
+openingHours.init();
+
+fetchAnimals('./animaisapi.json', '.numbers-grid');
 fetchBitcoin('https://blockchain.info/ticker', '.btc-preco');
 
 smoothScroll();
-menuMobile();
