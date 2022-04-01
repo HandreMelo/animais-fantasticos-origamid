@@ -49,6 +49,19 @@ body {
   letter-spacing: .1em;
 }
 
+.menu li {
+  position: relative;
+  bottom: 0;
+  box-shadow: 0;
+  transition: .3s;
+}
+
+.menu li:hover,
+.menu li.is-active {
+  box-shadow: 1px 1px 0 inset rgba(255,255,255,0.8), 5px 5px 5px rgba(0,0,0,0.3);
+  bottom: 3px;
+}
+
 .grid-section {
   grid-column: 2 / 4;
   width: 100%;
@@ -97,6 +110,10 @@ body {
   height: 370px;
   overflow-y: scroll;
   grid-column: 2;
+}
+
+.animais-lista li {
+  cursor: pointer;
 }
 
 .js [data-tab="content"] section {
@@ -174,8 +191,8 @@ body {
 }
 
 .js [data-animate="accordion"] dt + dd {
-  animation: slideUp .3s forwards;
   display: none;
+  animation: slideUp .3s forwards;
 }
 
 [data-animate="accordion"] dt.is-active + dd {
@@ -184,14 +201,20 @@ body {
 }
 
 [data-animate="accordion"] dt:after {
-  content: '↧';
+  content: '';
   display: inline-block;
+  background: url(../img/down-arrow.svg) center no-repeat;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
   margin-left: 10px;
+  transform: rotate(0);
+  transition: transform 300ms;
 }
 
 [data-animate="accordion"] dt.is-active:after {
-  content: '↥';
-  transition: all ease 300ms;
+  content: '';
+  transform: rotate(-180deg);
 }
 
 .mapa {
@@ -262,6 +285,10 @@ body {
 }
 
 @media (max-width: 700px) {
+  .grid-section h1 {
+    font-size: 2.5rem;
+  }
+
   .grid-container  {
     grid-template-columns: 1fr;
   }
@@ -366,6 +393,7 @@ body {
   to {
     opacity: 0;
     max-height: 0;
+    pointer-events: none;
   }
 }
 

@@ -9,6 +9,7 @@
 [data-dropdown]:hover .dropdown-menu,
 [data-dropdown].is-active .dropdown-menu {
   display: block;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
   animation: fade-up .3s forwards;
 }
 
