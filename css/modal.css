@@ -18,12 +18,14 @@
 .modal {
   background: #fff;
   padding: 40px;
-  border: 10px solid #FB5;
-  box-shadow: 0 0 0 10px rgba(255,255,255,.7);
+  border: 10px solid rgba(0,0,0,0);
+  outline: #FB5 solid 10px;
+  background-clip: padding-box;
   position: relative;
+  box-sizing: border-box;
   border-radius: 5px;
-  min-width: 300px;
-  max-width: 100%;
+  width: 80vw;
+  max-width: 600px;
 }
 
 .modal label {
@@ -49,6 +51,7 @@
   font-size: 1rem;
   color: #fff;
   font-family: 'IBM Plex Mono', monospace;
+  cursor:no-drop;
 }
 
 .fechar {
@@ -58,19 +61,15 @@
   width: 50px;
   height: 50px;
   border: 5px solid rgba(255,255,255,0.7);
-  background: #E54;
-  font-weight: 900;
-  font-size: 1.2rem;
+  background: #E54 url(../img/close.svg) center no-repeat;
   border-radius: 50%;
   z-index: 1;
   box-shadow: 2px 2px 5px rgba(0,0,0,.3);
   transition: all 0.3s;
-  font-family: 'IMB Plex mono', monospace;
   cursor: pointer;
 }
 
 .fechar:hover {
-  background: #fff;
   border: 5px solid #E54;
   transition: all 0.3s;
 }

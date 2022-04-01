@@ -9,6 +9,7 @@ import MenuMobile from './modules/menu-mobile.js';
 import fetchAnimals from './modules/fetch-animals.js';
 import fetchBitcoin from './modules/fetch-bitcoin.js';
 import OpeningHours from './modules/opening-hours.js';
+import SlideNav from './modules/slide.js';
 // import { accordionActive as accordion} from './modules/accordion-active';
 // se quiser modificar o nome.
 
@@ -40,3 +41,9 @@ fetchAnimals('./animaisapi.json', '.numbers-grid');
 fetchBitcoin('https://blockchain.info/ticker', '.btc-preco');
 
 smoothScroll();
+
+const slide = new SlideNav('.slide', '.slide-wrapper', 'is-active', 0);
+slide.init();
+slide.addArrow('.prev', '.next');
+
+slide.addControl('.custom-controls');
